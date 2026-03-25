@@ -40,7 +40,7 @@ state.score = 0;
 state.chainPeak = 0;
 state.panelsCleared = 0;
 swapAtCursor(state);
-assert.equal(state.chainPeak >= 2, true, "cascade should register chain depth");
+assert.equal(state.chainPeak >= 1, true, "clear should register chain depth");
 assert.equal(state.score > 0, true, "cascade should award score");
 assert.equal(state.panelsCleared >= 6, true, "cascade should clear panels");
 

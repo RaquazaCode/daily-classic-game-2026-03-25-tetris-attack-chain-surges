@@ -1,0 +1,24 @@
+{
+  "mode": "paused",
+  "score": 0,
+  "highScore": 0,
+  "chainPeak": 0,
+  "panelsCleared": 0,
+  "rowsRaised": 0,
+  "riseMs": 1000,
+  "cursorRow": 7,
+  "cursorCol": 1,
+  "lastEvent": "Paused",
+  "rows": [
+    "......",
+    "......",
+    "......",
+    "......",
+    "CBDBEC",
+    "ADBADA",
+    "EEAEAC",
+    "BDADEB",
+    "EBEEDD",
+    "BEAAEC"
+  ]
+}
