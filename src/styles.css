@@ -1,0 +1,124 @@
+:root {
+  color-scheme: dark;
+  font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+  background: radial-gradient(circle at top, #1f2d48 0%, #0f1524 50%, #090d16 100%);
+  color: #f1f3f8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+}
+
+.app {
+  width: min(680px, 100%);
+  background: rgba(10, 16, 29, 0.88);
+  border: 1px solid rgba(167, 198, 255, 0.35);
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.35);
+}
+
+h1 {
+  margin: 0;
+  font-size: 1.7rem;
+}
+
+.tag {
+  margin: 4px 0 12px;
+  color: #bfd4ff;
+}
+
+.hud {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.hud p {
+  margin: 0;
+  padding: 6px 8px;
+  border-radius: 8px;
+  background: rgba(127, 164, 231, 0.12);
+  font-size: 0.92rem;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.controls button {
+  border: 0;
+  border-radius: 999px;
+  padding: 8px 12px;
+  font-weight: 700;
+  color: #0f1a2e;
+  background: linear-gradient(180deg, #acd0ff, #74b3ff);
+  cursor: pointer;
+}
+
+.event {
+  min-height: 1.3em;
+  margin: 0 0 12px;
+  color: #ffd6a4;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 4px;
+  background: rgba(24, 37, 64, 0.75);
+  border-radius: 12px;
+  padding: 8px;
+}
+
+.cell {
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 7px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  display: grid;
+  place-items: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #0b1321;
+  text-transform: uppercase;
+}
+
+.cell[data-empty="true"] {
+  background: rgba(120, 142, 183, 0.15);
+  color: #93a7d1;
+}
+
+.cell[data-color="1"] { background: #ff8a80; }
+.cell[data-color="2"] { background: #ffd180; }
+.cell[data-color="3"] { background: #a5d6a7; }
+.cell[data-color="4"] { background: #90caf9; }
+.cell[data-color="5"] { background: #ce93d8; }
+
+.cell[data-cursor="left"],
+.cell[data-cursor="right"] {
+  outline: 2px solid #fff;
+  box-shadow: 0 0 0 2px #10213f inset;
+}
+
+.cell[data-cursor="right"] {
+  outline-style: dashed;
+}
+
+@media (max-width: 640px) {
+  .hud {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

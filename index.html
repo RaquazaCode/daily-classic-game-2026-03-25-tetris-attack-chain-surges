@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>daily-classic-game-2026-03-25-tetris-attack-chain-surges</title>
+    <link rel="icon" href="./assets/favicon.svg" />
+    <link rel="stylesheet" href="./src/styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header>
+        <h1>Tetris Attack: Chain Surges</h1>
+        <p class="tag">Deterministic panel-matching with rising pressure and chain multipliers.</p>
+      </header>
+      <section class="hud" aria-label="Game status">
+        <p>Mode: <span id="mode">title</span></p>
+        <p>Score: <span id="score">0</span></p>
+        <p>High: <span id="high-score">0</span></p>
+        <p>Chains: <span id="chains">0</span></p>
+        <p>Rows Cleared: <span id="rows-cleared">0</span></p>
+        <p>Rise In: <span id="rise-ms">0</span>ms</p>
+      </section>
+      <section class="controls">
+        <button id="start-btn" type="button">Start (Enter)</button>
+        <button id="pause-btn" type="button">Pause (P)</button>
+        <button id="swap-btn" type="button">Swap (Space)</button>
+        <button id="reset-btn" type="button">Reset (R)</button>
+      </section>
+      <p id="event" class="event">Press Enter to begin.</p>
+      <div id="board" class="board" role="grid" aria-label="Panel board"></div>
+    </main>
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
